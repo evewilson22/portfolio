@@ -49,17 +49,20 @@ h2 {
 .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
-    justify-content: space-around;
+    gap: 15px; /* Space between images */
+    justify-content: center;
 }
 
 figure {
-    margin: 0;
+    flex: 1 1 calc(33.33% - 15px); /* Adjusts to allow three items per row */
+    max-width: calc(33.33% - 15px);
+    box-sizing: border-box;
     text-align: center;
 }
 
 figure img {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -81,3 +84,4 @@ footer {
     color: #4a7c59;
     margin-top: 2rem;
 }
+
